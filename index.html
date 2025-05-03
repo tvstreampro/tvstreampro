@@ -4,7 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Página de repositório oficial do plugin TVSTREAMPRO para Kodi. Baixe a versão mais recente.">
-  <title>PLUGIN TVSTREAMPRO[++] ❤️</title>
+
+  <!-- SEO e Open Graph -->
+  <meta property="og:title" content="PLUGIN TVSTREAMPRO[++] ❤️" />
+  <meta property="og:description" content="Página de repositório oficial do plugin TVSTREAMPRO para Kodi. Baixe a versão mais recente." />
+  <meta property="og:image" content="https://raw.githubusercontent.com/BLACKSHEEPcolabdev/add-on/master/BLACKGHOST/Imagens/plugin.png" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#ff5722" />
+
+  <title>Baixar Plugin TVSTREAMPRO[++] para Kodi - Versão 4.5</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
 
   <style>
@@ -36,6 +44,12 @@
       font-weight: bold;
       color: #ff5722;
       margin-bottom: 30px;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
     }
 
     .card {
@@ -72,7 +86,7 @@
     .button {
       display: inline-block;
       background-color: #ff5722;
-      color: #fff;
+      color: #000;
       padding: 12px 25px;
       border-radius: 8px;
       text-transform: uppercase;
@@ -84,6 +98,10 @@
 
     .button:hover {
       background-color: #e64a19;
+    }
+
+    .button.black-text {
+      color: #000 !important;
     }
 
     footer {
@@ -117,6 +135,29 @@
       }
     }
   </style>
+
+  <script>
+    // Bloquear o menu de contexto (botão direito do mouse)
+    document.addEventListener('contextmenu', e => e.preventDefault());
+
+    // Bloquear a seleção de texto
+    document.addEventListener('selectstart', e => e.preventDefault());
+
+    // Bloquear cliques com o botão direito e o botão esquerdo do mouse
+    document.addEventListener('mousedown', function(e) {
+      if (e.button === 2 || e.button === 0) { // Botões direito (2) e esquerdo (0)
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    });
+
+    // Bloquear as teclas de atalho comuns de cópia/cola
+    document.addEventListener('keydown', function(e) {
+      if (e.ctrlKey && (e.key === 'c' || e.key === 'v' || e.key === 'x')) {
+        e.preventDefault();
+      }
+    });
+  </script>
 </head>
 <body>
 
@@ -126,7 +167,7 @@
     </div>
 
     <div class="card">
-      <img src="https://raw.githubusercontent.com/BLACKSHEEPcolabdev/add-on/master/BLACKGHOST/Imagens/plugin.png" alt="TVSTREAMPRO Icon" />
+      <img src="https://raw.githubusercontent.com/BLACKSHEEPcolabdev/add-on/master/BLACKGHOST/Imagens/plugin.png" alt="Ícone do plugin TVSTREAMPRO" />
       <div>
         <a href="plugin.video.tvstreampro.zip">plugin.video.tvstreampro.zip</a>
         <div>Versão: 4.5</div>
@@ -135,8 +176,8 @@
     </div>
 
     <div class="card">
-      <img src="https://raw.githubusercontent.com/BLACKSHEEPcolabdev/add-on/master/BLACKGHOST/Imagens/contato.png" alt="Telegram Icon" />
-      <a href="https://t.me/+tc6Q79cqS99hNmYx" class="button">Entrar no Grupo Telegram</a>
+      <img src="https://raw.githubusercontent.com/BLACKSHEEPcolabdev/add-on/master/BLACKGHOST/Imagens/contato.png" alt="Ícone do Telegram" />
+      <a href="https://t.me/+tc6Q79cqS99hNmYx" class="button black-text">Entrar no Grupo</a>
     </div>
 
     <footer>
