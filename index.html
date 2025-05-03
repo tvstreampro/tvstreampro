@@ -110,7 +110,6 @@
       font-size: 14px;
     }
 
-    /* Responsividade */
     @media (max-width: 600px) {
       .container {
         padding: 15px;
@@ -137,21 +136,14 @@
   </style>
 
   <script>
-    // Bloquear o menu de contexto (botão direito do mouse)
     document.addEventListener('contextmenu', e => e.preventDefault());
-
-    // Bloquear a seleção de texto
     document.addEventListener('selectstart', e => e.preventDefault());
-
-    // Bloquear cliques com o botão direito e o botão esquerdo do mouse
     document.addEventListener('mousedown', function(e) {
-      if (e.button === 2 || e.button === 0) { // Botões direito (2) e esquerdo (0)
+      if (e.button === 2 || e.button === 0) {
         e.preventDefault();
         e.stopPropagation();
       }
     });
-
-    // Bloquear as teclas de atalho comuns de cópia/cola
     document.addEventListener('keydown', function(e) {
       if (e.ctrlKey && (e.key === 'c' || e.key === 'v' || e.key === 'x')) {
         e.preventDefault();
@@ -172,6 +164,16 @@
         <a href="plugin.video.tvstreampro.zip">plugin.video.tvstreampro.zip</a>
         <div>Versão: 4.5</div>
         <div>Atualizado em: 28/04/2025</div>
+      </div>
+    </div>
+
+    <!-- NOVO BLOCO BLACKGHOST REPO -->
+    <div class="card">
+      <img src="https://raw.githubusercontent.com/BLACKSHEEPcolabdev/add-on/master/BLACKGHOST/Imagens/repo_icon.png" alt="Ícone do repositório BLACKGHOST" />
+      <div>
+        <a href="repository.repoblackghost1.zip">repository.repoblackghost1.zip</a>
+        <div>Versão: 1.6</div>
+        <div>Atualizado em: 22/01/2025</div>
       </div>
     </div>
 
