@@ -1,4 +1,4 @@
-⚡ DOWNLOAD DO ADD-ON ⚡
+⚡ DOWNLOAD DO ADD-ON 
 
 📥 Como adicionar no Kodi:
 
