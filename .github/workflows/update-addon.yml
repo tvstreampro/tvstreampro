@@ -1,0 +1,45 @@
+name: Update TVSTREAMPRO Addon
+
+on:
+  push:
+    branches:
+      - main  # A branch principal do repositório, onde o código atualizado será enviado.
+
+jobs:
+  update-addon:
+    runs-on: ubuntu-latest  # O ambiente onde o workflow vai ser executado.
+
+    steps:
+      # Etapa 1: Checkout do repositório
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      # Etapa 2: Configuração do ambiente Python
+      - name: Set up Python environment
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8  # A versão do Python que você usa, altere se necessário.
+
+      # Etapa 3: Instalar dependências (caso tenha um requirements.txt)
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      # Etapa 4: Construção do Addon
+      - name: Build TVSTREAMPRO Addon
+        run: |
+          # Aqui você pode adicionar o comando para empacotar seu add-on, 
+          # isso pode variar dependendo de como o seu add-on é construído.
+          python setup.py sdist  # Ajuste esse comando conforme o seu processo de build.
+
+      # Etapa 5: Criar um release (opcional)
+      - name: Create a release
+        run: |
+          # Você pode gerar uma nova versão no GitHub (release) aqui, se desejar.
+          gh release create v$(date +%Y%m%d%H%M%S) dist/*
+
+      # Etapa 6: Deploy do Addon (se necessário)
+      - name: Deploy TVSTREAMPRO Addon (se necessário)
+        run: |
+          # Adicione o processo de deploy, se necessário.
+          echo "TVSTREAMPRO Addon atualizado com sucesso!"
